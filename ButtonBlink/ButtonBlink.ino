@@ -6,7 +6,7 @@ int button_state = 0;
 void setup() {
     Serial.begin(9600);
     pinMode(LED_0, OUTPUT);
-    pinMode(BUTTON_0, INPUT);
+    pinMode(BUTTON_0, INPUT_PULLUP);
 }
 
 void loop() {
@@ -14,11 +14,11 @@ void loop() {
     Serial.println("Button state is: " + String(button_state));
 
     if (button_state == 1) {
-        digitalWrite(LED_0, HIGH);
+        digitalWrite(LED_0, LOW);
     }
 
     if (button_state == 0) {
-        digitalWrite(LED_0, LOW);
+        digitalWrite(LED_0, HIGH);
     }
 }
 
