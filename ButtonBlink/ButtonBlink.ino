@@ -1,6 +1,8 @@
 
-const int LED_0 = 13;
-const int BUTTON_0 = 2;
+const int LED_0 = 2;
+
+const int BUTTON_0 = 12;
+
 int button_state = 0;
 
 void setup() {
